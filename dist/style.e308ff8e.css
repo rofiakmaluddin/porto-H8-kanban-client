@@ -1,0 +1,48 @@
+nav {
+  background-color: #C00C0B;
+  color: white;
+}
+nav #leftNav a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+nav #rightNav a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+nav #rightNav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.taskButton {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.FixedHeightContainer
+{
+  float:right;
+  height: 95%;
+  background-color: salmon;
+}
+.cardContainer
+{
+  height:510px;
+  overflow:auto;
+  background-color: grey;
+
+}
+.addBtn {
+  color: aqua;
+  height:40px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

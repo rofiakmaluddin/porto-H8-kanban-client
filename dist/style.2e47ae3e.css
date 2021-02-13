@@ -1,0 +1,2 @@
+nav{background-color:#c00c0b;color:#fff}nav #leftNav a{font-size:30px}nav #leftNav a,nav #rightNav a{color:#fff;text-decoration:none}nav #rightNav a{font-size:20px}nav #rightNav{align-items:center}.taskButton,nav #rightNav{display:flex;justify-content:space-evenly}.FixedHeightContainer{float:right;height:95%;background-color:salmon}.cardContainer{height:510px;overflow:auto;background-color:grey}.addBtn{color:#0ff;height:40px;background-color:#8a2be2;display:flex;justify-content:center;align-items:center}
+/*# sourceMappingURL=/style.2e47ae3e.css.map */
