@@ -70,7 +70,7 @@
         editForm: false,
         showPage: 'login',
         categories: ['Backlog','Todo','Doing','Done'],
-        baseUrl: 'http://localhost:3000/'
+        baseUrl: 'https://kanban-portfolio-app.herokuapp.com/'
       }
     },
     components: {
