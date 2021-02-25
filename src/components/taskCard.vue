@@ -7,10 +7,10 @@
         <p class="card-text">{{task.description}}</p>
         <p class="card-text">By {{task.User.firstName}} {{task.User.lastName}}</p>
         <div class="taskButton m-0 p-0">
-          <a class="taskButton2" v-on:click="changeCategory(task.id, task.category,false)" v-if = "task.category !== 'Backlog'" href=""><i class="fas fa-arrow-circle-left"></i></a>
-          <a class="taskButton2" v-on:click="getById(task.id)" href=""><i class="fas fa-edit"></i></a>
-          <a class="taskButton2" v-on:click="destroy(task.id)" href=""><i class="fas fa-trash-alt"></i></a> 
-          <a class="taskButton2" @click="changeCategory(task.id, task.category,true)" v-if = "task.category !== 'Done'" href=""><i class="fas fa-arrow-circle-right"></i></a>
+          <a class="taskButton2" v-on:click.prevent="changeCategory(task.id, task.category,false)" v-if = "task.category !== 'Backlog'" href=""><i class="fas fa-arrow-circle-left"></i></a>
+          <a class="taskButton2" v-on:click.prevent="getById(task.id)" href=""><i class="fas fa-edit"></i></a>
+          <a class="taskButton2" v-on:click.prevent="destroy(task.id)" href=""><i class="fas fa-trash-alt"></i></a> 
+          <a class="taskButton2" @click.prevent="changeCategory(task.id, task.category,true)" v-if = "task.category !== 'Done'" href=""><i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@ export default {
         console.log(data);
         // this.getAllData()
         // this.auth()
-        swal("Task is edited", data.msg, "success");
+        swal("Task has been deleted", data.msg, "success");
 
         this.getAllData()
         this.changeShowPage(this.is)
@@ -145,7 +145,7 @@ export default {
       })
       .catch(err => {
         console.log(err);
-        swal("Error", "", "error");
+        swal("Error", "You cannot change other's task", "error");
       })
     }
   }

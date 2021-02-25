@@ -70,7 +70,7 @@
         editForm: false,
         showPage: 'login',
         categories: ['Backlog','Todo','Doing','Done'],
-        baseUrl: 'https://kanban-portfolio-app.herokuapp.com/'
+        baseUrl: 'http://localhost:3000/'
       }
     },
     components: {
@@ -105,6 +105,7 @@
         })
         .then(({data})=>{
           // console.log(data,'>>>> AllData');
+          this.taskData = []
           console.log('ini getAllData >>>>>>>>>>>>>');
           this.categories.forEach(category => {
             let temp = []

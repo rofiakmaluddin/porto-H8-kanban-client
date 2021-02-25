@@ -11544,7 +11544,7 @@ var _default = {
         console.log(data); // this.getAllData()
         // this.auth()
 
-        (0, _sweetalert.default)("Task is edited", data.msg, "success");
+        (0, _sweetalert.default)("Task has been deleted", data.msg, "success");
 
         _this3.getAllData();
 
@@ -11584,7 +11584,7 @@ var _default = {
 
       }).catch(function (err) {
         console.log(err);
-        (0, _sweetalert.default)("Error", "", "error");
+        (0, _sweetalert.default)("Error", "You cannot change other's task", "error");
       });
     }
   }
@@ -11632,6 +11632,7 @@ exports.default = _default;
                       attrs: { href: "" },
                       on: {
                         click: function($event) {
+                          $event.preventDefault()
                           return _vm.changeCategory(
                             _vm.task.id,
                             _vm.task.category,
@@ -11651,6 +11652,7 @@ exports.default = _default;
                   attrs: { href: "" },
                   on: {
                     click: function($event) {
+                      $event.preventDefault()
                       return _vm.getById(_vm.task.id)
                     }
                   }
@@ -11665,6 +11667,7 @@ exports.default = _default;
                   attrs: { href: "" },
                   on: {
                     click: function($event) {
+                      $event.preventDefault()
                       return _vm.destroy(_vm.task.id)
                     }
                   }
@@ -11680,6 +11683,7 @@ exports.default = _default;
                       attrs: { href: "" },
                       on: {
                         click: function($event) {
+                          $event.preventDefault()
                           return _vm.changeCategory(
                             _vm.task.id,
                             _vm.task.category,
@@ -12418,6 +12422,7 @@ var _default = {
       }).then(function (_ref) {
         var data = _ref.data;
         // console.log(data,'>>>> AllData');
+        _this.taskData = [];
         console.log('ini getAllData >>>>>>>>>>>>>');
 
         _this.categories.forEach(function (category) {
@@ -12637,7 +12642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41963" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33269" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
